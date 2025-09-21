@@ -4,7 +4,11 @@ Created on Sun Sep 21 13:16:48 2025
 
 @author: ravra
 """
+from signals import generate_sine_wave
+import matplotlib.pyplot as plt
 
-import signals
-t, y = signals.generate_sine_wave(5, 2, 100)
-print(t, y)
+print(generate_sine_wave(5, 2, 100)[0:10])
+
+plt.plot(generate_sine_wave(5, 2, 100))
+plt.show()
+
