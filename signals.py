@@ -11,21 +11,25 @@ def generate_sine_wave(frequency, duration, sample_rate):
 
     Parameters
     ----------
-    frequency : .
-    duration : how long the sine wave continues for.
-    sample_rate : TYPE
-        DESCRIPTION.
+    frequency : Float.
+    Number of cycli the wave does per second, measured in Hertz
+    duration : Float.
+    How long the sine wave continues for.
+    sample_rate : Float.
+    Amount of plotted points per second.
 
     Returns
     -------
-    y : TYPE
-        DESCRIPTION.
+    y : Float.
+    Amplitude
+    t : Float.
+    Time
 
     """
     t = np.linspace(0, duration, sample_rate)
     y = np.sin(frequency*2*np.pi*t)
-    return y
+    return t, y
 
-def u(start, finish, delay, amplitude):
-    t = np.linspace(start, finish, 1000)
-    return np.where(t<0 - delay, 0, amplitude)
+def u(start, finish, delay, amplitude, sample_rate):
+    t = np.linspace(start, finish, sample_rate)
+    return t, np.where(t<0 - delay, 0, amplitude)
