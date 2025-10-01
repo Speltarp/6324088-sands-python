@@ -28,4 +28,7 @@ plt.xlabel("Time")
 plt.ylabel("Height")
 plt.show()
 
-
+t, y = sig.modified_sine_wave(5, 2, 1000, 3, 0.5)
+plt.figure(3)
+plt.plot(t, y)
+plt.show()
