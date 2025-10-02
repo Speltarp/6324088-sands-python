@@ -8,7 +8,7 @@ import signals as sig
 import matplotlib.pyplot as plt
 
 #generate a sine wave
-print(sig.generate_sine_wave(5, 2, 100)[0:10])
+#print(sig.generate_sine_wave(5, 2, 100)[0:10])
 
 t, y = sig.generate_sine_wave(5, 2, 100)
 plt.figure(1)
