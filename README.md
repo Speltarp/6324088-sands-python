@@ -24,7 +24,8 @@ into the run file. All the functions of the signals file do use the numpy librar
 Using the functions from the signals file we then generate various signals in the run file and plot them using matplotlib.pyplot.
 Below an example how we would use these funtions to plot a sine wave using ```generate_sine_wave(frequency, duration, sample_rate) ```
 
-```import signals as sig
+```
+import signals as sig
 import matplotlib.pyplot as plt
 
 t, y = sig.generate_sine_wave(2, 3, 100)
