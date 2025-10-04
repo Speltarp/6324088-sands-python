@@ -34,4 +34,5 @@ plt.plot(t, y)
 plt.title("Sine wave")
 plt.xlabel("Time")
 plt.ylabel("Amplitude")
-plt.show()```
+plt.show()
+```
