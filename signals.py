@@ -57,6 +57,11 @@ def u(start, finish, amplitude, sample_rate):
     y = np.where(t<0, 0, amplitude)
     return t, y 
 
+def pulse(start, stop, amplitude, shift, length, sample_rate=1000):
+    t = np.linspace(start, stop, sample_rate)
+    y = np.where((1/length)*np.abs(t-shift) <= 0.5, amplitude, 0)
+    return t, y
+
 def modified_sine_wave(frequency, duration, sample_rate, amplitude, Offset):
     """
     generates a modified sine wave
