@@ -58,6 +58,32 @@ def u(start, finish, amplitude, sample_rate):
     return t, y 
 
 def pulse(start, stop, amplitude, shift, length, sample_rate=1000):
+    '''
+    Creates a pulse
+
+    Parameters
+    ----------
+    start : TYPE
+        DESCRIPTION.
+    stop : TYPE
+        DESCRIPTION.
+    amplitude : TYPE
+        DESCRIPTION.
+    shift : TYPE
+        DESCRIPTION.
+    length : TYPE
+        DESCRIPTION.
+    sample_rate : TYPE, optional
+        DESCRIPTION. The default is 1000.
+
+    Returns
+    -------
+    t : TYPE
+        DESCRIPTION.
+    y : TYPE
+        DESCRIPTION.
+
+    '''
     t = np.linspace(start, stop, sample_rate)
     y = np.where((1/length)*np.abs(t-shift) <= 0.5, amplitude, 0)
     return t, y
