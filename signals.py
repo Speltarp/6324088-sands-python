@@ -63,25 +63,25 @@ def pulse(start, stop, amplitude, shift, length, sample_rate=1000):
 
     Parameters
     ----------
-    start : TYPE
-        DESCRIPTION.
-    stop : TYPE
-        DESCRIPTION.
-    amplitude : TYPE
-        DESCRIPTION.
-    shift : TYPE
-        DESCRIPTION.
-    length : TYPE
-        DESCRIPTION.
-    sample_rate : TYPE, optional
-        DESCRIPTION. The default is 1000.
+    start : Float.
+    Moment in time where function starts
+    stop : Float.
+    Moment in time where function stops
+    amplitude : Float.
+    Height of the pulse
+    shift : Float.
+    Moves the pulse function in time
+    length : Float.
+    How long the pulse lasts for
+    sample_rate : Integer.
+    Amount of plotted points per second.
 
     Returns
     -------
-    t : TYPE
-        DESCRIPTION.
-    y : TYPE
-        DESCRIPTION.
+    t : numpy.ndarray
+    Time
+    y : numpy.ndarray
+    The amplitude
 
     '''
     t = np.linspace(start, stop, sample_rate)
