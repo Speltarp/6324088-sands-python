@@ -1,2 +1,13 @@
 
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta" 
 
+[project]
+name = "Signals_and_Systems_practical"
+version = "0.1.0"
+description = "Generates signals, modifies these signals and plots them"
+authors = [
+    {name = "Rick van 't Verlaat ", email = "R.P.D.Verlaat@student.tudelft.nl"}
+]
+dependencies = ["numpy", "matplotlib"]
