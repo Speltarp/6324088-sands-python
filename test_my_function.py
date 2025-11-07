@@ -21,7 +21,6 @@ def test_pulse():
     assert len(t) == 20000
     
 
-
 #testing modified_u(start, finish, delay, amplitude, sample_rate)
 def test_modified_u():
     t, y = sig.modified_u(-5, 5, -2, 4, 1000)
@@ -29,3 +28,21 @@ def test_modified_u():
     assert len(t) == 10000
     assert y[5000] == 0
     assert y[9000] == 4
+    
+#testing generate_sine_wave(frequency, duration, sample_rate)
+def test_generate_sine_wave():
+    t,y = sig.generate_sine_wave(2, 2, 10000)
+    assert len(t) == 20000
+    assert y[0] == 0
+    assert np.isclose(max(y), 1, atol=1e-6)
+
+#testing u(start, finish, amplitude, sample_rate)
+def test_u():
+    t, y = sig.u(-4, 4, 4, 1000)
+    len(t) == 8000
+    assert y[3000] == 0
+    assert y[5000] == 4
+    
+
+
+    
