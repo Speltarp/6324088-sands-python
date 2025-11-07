@@ -18,7 +18,7 @@ plt.title("Sine wave")
 plt.xlabel("Time")
 plt.ylabel("Amplitude")
 
-#generate unit step function
+#generate unit step function u(start, finish, amplitude, sample_rate)
 t, y = sig.u(-10, 10, 1, 1000)
 plt.figure(2)
 plt.plot(t, y)
@@ -27,12 +27,14 @@ plt.title("Unit Step function")
 plt.xlabel("Time")
 plt.ylabel("Height")
 
-#generate pulse function
-#pulse(start, stop, amplitude, shift, length, sample_rate=1000)
-t, y = sig.pulse(-20, 20, 2, 3, 4)
+# generate pulse(start, stop, amplitude, shift, length, sample_rate=1000)
+t, y = sig.pulse(-20, 20, 2, 0, 4)
 plt.figure(3)
 plt.plot(t, y)
 plt.grid(True)
+plt.title("Pulse")
+plt.xlabel("Time")
+plt.ylabel("Height")
 
 #generate a modified sine wave with higher amplitude and offset of 0.5, making it a cosine
 t, y = sig.modified_sine_wave(5, 2, 1000, 3, 0.5)
