@@ -12,7 +12,7 @@ This repository contains the following files:
     - Function ```u(start, finish, amplitude, sample_rate)``` which generates a regular unit step function
     - Function ```modified_sine_wave(frequency, duration, sample_rate, amplitude, Offset)``` which generates a sine wave with modified amplitude and offset
     - Function ```modified_u(start, finish, delay, amplitude, sample_rate)``` which generates a unit step function with a chosen delay
-    - Function ```pulse(start, stop, amplitude, shift, length, sample_rate=1000)``` which generates a pulse function
+    - Function ```pulse(start, stop, amplitude, shift, length, sample_rate=1000)``` which generates a pulse function whose amplitude and length can be modified and which can be shifted
 2. run.py which runs the above mentioned functions
 3. test_my_function.py which uses pytest to test the funtions in signals.py
 4. hello.py which was a test file to see if the repository was correctly linked and has no further use
@@ -41,3 +41,5 @@ plt.xlabel("Time")
 plt.ylabel("Amplitude")
 plt.show()
 ```
+Below the proof that tests were run and that all the functions now work as they are supposed to
+![Pytest result](C:/Users/ravra/Pictures/Screenshots/Schermafbeelding 2025-11-07 144951.png)
