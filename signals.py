@@ -26,7 +26,7 @@ def generate_sine_wave(frequency, duration, sample_rate):
     Time
 
     """
-    t = np.linspace(0, duration, sample_rate)
+    t = np.linspace(0, duration, duration*sample_rate)
     y = np.sin(frequency*2*np.pi*t)
     return t, y
 
@@ -53,7 +53,7 @@ def u(start, finish, amplitude, sample_rate):
     The amplitude values (0 for t<0, 'amplitude' for t>0)
 
     """
-    t = np.linspace(start, finish, sample_rate)
+    t = np.linspace(start, finish, int((finish - start)*sample_rate))
     y = np.where(t<0, 0, amplitude)
     return t, y 
 
