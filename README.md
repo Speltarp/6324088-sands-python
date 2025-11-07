@@ -18,6 +18,7 @@ This repository contains the following files:
 4. hello.py which was a test file to see if the repository was correctly linked and has no further use
 5. test.py is a test file to see how assert worked, the real testing is done in test_my_function.py
 6. pyproject.toml
+7. Images which is a folder containing images that are used in the readme
 
 
 ## How to use
