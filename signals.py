@@ -63,9 +63,9 @@ def pulse(start, stop, amplitude, shift, length, sample_rate=1000):
 
     Parameters
     ----------
-    start : Float.
+    start : Integer.
     Moment in time where function starts
-    stop : Float.
+    stop : Integer.
     Moment in time where function stops
     amplitude : Float.
     Height of the pulse
@@ -84,7 +84,7 @@ def pulse(start, stop, amplitude, shift, length, sample_rate=1000):
     The amplitude
 
     '''
-    t = np.linspace(start, stop, sample_rate)
+    t = np.linspace(start, stop, int((stop - start) * sample_rate))
     y = np.where((1/length)*np.abs(t-shift) <= 0.5, amplitude, 0)
     return t, y
 
@@ -113,7 +113,7 @@ def modified_sine_wave(frequency, duration, sample_rate, amplitude, Offset):
     Time
 
     """
-    t = np.linspace(0, duration, sample_rate)
+    t = np.linspace(0, duration, duration*sample_rate)
     y = amplitude * np.sin(frequency*2*np.pi*t+Offset * np.pi)
     return t, y
     
@@ -142,7 +142,7 @@ def modified_u(start, finish, delay, amplitude, sample_rate):
     The amplitude values (0 for t<0, 'amplitude' for t>0)
 
     """
-    t = np.linspace(start, finish, sample_rate)
+    t = np.linspace(start, finish, int((finish - start)*sample_rate))
     y = np.where(t<0 - delay, 0, amplitude)
     return t, y
     
