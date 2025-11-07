@@ -42,4 +42,4 @@ plt.ylabel("Amplitude")
 plt.show()
 ```
 Below the proof that tests were run and that all the functions now work as they are supposed to
-![Pytest result](C:/Users/ravra/Python/Systems and Signals/6324088-sands-python/pytest_result.png)
+![Pytest result](Images/pytest_result.png)
